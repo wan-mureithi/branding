@@ -9,14 +9,6 @@ import SectionHeading from './ui/section-heading'
 import Link from 'next/link'
 
 function Programs() {
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  }
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -28,12 +20,12 @@ function Programs() {
 
   const programs = [
     {
-      image: '/images/program-1.png',
+      image: '/images/programs/gameon.png',
       title: 'The',
       highlightedWord: 'GameOn',
       suffix: 'Program',
-      description:
-        'Lorem ipsum dolor sit amet consectetur. Vitae neque aliquet tortor aenean non. Feugiat eu vitae mattis volutpat a. Ullamcorper hac vivamus id dui etiam sed turpis. Enim tempus diam sed vitae.',
+      description: `Transforming how young people access sports facilities. This initiative bridges the gap between players and venue owners by providing a seamless platform to discover, book, and connect with others for games. 
+      `,
     },
     {
       image: '/images/program-1.png',

@@ -17,12 +17,11 @@ function ProgramsGallery() {
   }
   const programs = [
     {
-      image: '/images/program-1.png',
+      image: '/images/programs/gameon.png',
       title: 'The',
       highlightedWord: 'GameOn',
       suffix: 'Program',
-      description:
-        'Lorem ipsum dolor sit amet consectetur. Vitae neque aliquet tortor aenean non. Feugiat eu vitae mattis volutpat a. Ullamcorper hac vivamus id dui etiam sed turpis. Enim tempus diam sed vitae.',
+      description: `Transforming how young people access sports facilities. This initiative bridges the gap between players and venue owners by providing a seamless platform to discover, book, and connect with others for games.`,
     },
     {
       image: '/images/programs/Image-12.png',

@@ -14,16 +14,16 @@ import Footer from '../components/footer'
 import Topbar from '../components/topbar'
 import WhatWeDo from '../components/what-we-do'
 import AutoScrollCarousel from '../components/autoscroll-logos'
+import HeroCarousel from '../components/hero-carousel'
 
 function Page() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Topbar />
 
-      <section className="container mx-auto px-4 py-12 md:py-24">
+      <section className="container mx-auto px-4  ">
         <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-          {/* Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 py-12 md:py-24 ">
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -38,7 +38,7 @@ function Page() {
                   alt=""
                   width={300}
                   height={100}
-                  className="absolute -bottom-1 right-0 md:-bottom-2 z-[-1]"
+                  className="absolute hidden -bottom-1 right-0 md:block md:-bottom-2 z-[-1]"
                 />
               </span>
               <Image
@@ -79,12 +79,13 @@ function Page() {
 
           {/* Hero Image */}
           <div className="relative hidden md:block aspect-[4/3] md:aspect-square">
-            <Image
+            {/* <Image
               src="/images/hero.svg"
               alt="Youth empowerment activities"
               fill
               className="object-cover rounded-2xl"
-            />
+            /> */}
+            <HeroCarousel />
           </div>
         </div>
 
