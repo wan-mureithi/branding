@@ -98,9 +98,18 @@ function Programs() {
                   {/* Text Content */}
                   <div className="p-2 md:p-8">
                     <p className="mb-6 text-gray-400">{program.description}</p>
-                    <Button variant="default" className="px-6">
-                      Learn More →
-                    </Button>
+                    <a
+                      href="https://game-on-web.web.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="group">
+                        Learn More
+                        <span className="inline-block transition-transform group-hover:translate-x-1">
+                          →
+                        </span>
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>

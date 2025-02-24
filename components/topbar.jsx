@@ -67,13 +67,16 @@ function Topbar() {
             </a>
             <Button
               variant="ghost"
-              href="/login"
+              onClick={() => router.push('/login')}
               className="text-white text-left hover:text-pink-500"
             >
               <User className="w-6 h-6" fill="#ffff" />
               Log In
             </Button>
-            <Button className="bg-pink-600 hover:bg-pink-700">
+            <Button
+              onClick={() => router.push('/register')}
+              className="bg-pink-600 hover:bg-pink-700"
+            >
               SIGN UP FOR FREE →
             </Button>
           </nav>
