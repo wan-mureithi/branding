@@ -78,7 +78,7 @@ function Page() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative hidden aspect-[4/3] md:aspect-square">
+          <div className="relative hidden md:block aspect-[4/3] md:aspect-square">
             <Image
               src="/images/hero.svg"
               alt="Youth empowerment activities"
