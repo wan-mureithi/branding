@@ -75,7 +75,6 @@ function WhoAreWe() {
               </p>
             </div>
 
-            {/* Buttons & Smiley Icon */}
             <div>
               <div className="flex gap-2">
                 <motion.div
@@ -101,11 +100,10 @@ function WhoAreWe() {
             </div>
           </motion.div>
 
-          {/* Right Side - Image & Floating Icon */}
           <motion.div variants={fadeUpVariants} className="relative md:w-1/2">
             <motion.div whileHover={imageHoverEffect} className="relative">
               <Image
-                src="/images/about/about.png"
+                src="/images/about/about.svg"
                 alt="Team photo"
                 width={600}
                 height={400}
@@ -113,7 +111,6 @@ function WhoAreWe() {
               />
             </motion.div>
 
-            {/* Floating Light Bulb Icon */}
             <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}

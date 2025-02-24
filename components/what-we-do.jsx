@@ -7,22 +7,22 @@ import SectionHeading from './ui/section-heading'
 function WhatWeDo() {
   const galleryImages = [
     {
-      src: '/images/programs/program1.png',
+      src: '/images/programs/program1.svg',
       alt: 'Large group photo of program participants',
       className: 'w-full md:w-[90%] aspect-[16/9]',
     },
     {
-      src: '/images/programs/program2.png',
+      src: '/images/programs/program2.svg',
       alt: 'Outdoor presentation event',
       className: 'w-full md:w-[95%] aspect-[3/4]',
     },
     {
-      src: '/images/programs/program3.png',
+      src: '/images/programs/program3.svg',
       alt: 'Check presentation ceremony with balloons',
       className: 'w-full md:w-[95%] aspect-[3/4]',
     },
     {
-      src: '/images/programs/program4.png',
+      src: '/images/programs/program4.svg',
       alt: 'Group photo at university entrance',
       className: 'w-full md:w-[95%] aspect-square',
     },
