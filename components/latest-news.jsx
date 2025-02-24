@@ -1,8 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import { User, CalendarDays } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../components/ui/button'
-import { GradientArrowButton } from '../components/ui/gradient-arrow-btn'
 import SectionHeading from '../components/ui/section-heading'
 import { Card, CardContent } from '../components/ui/card'
 
@@ -120,14 +120,14 @@ function LatestNews() {
               </Card>
             ))}
           </div>
-          
         </div>
         <div className="flex mt-8 justify-center items-center gap-4">
-            <Button className="px-8 py-6 text-lg">
+          <Link href="/programs">
+            <Button className="px-8 py-6 text-md">
               View all Programs and Initiatives
             </Button>
-            <GradientArrowButton />
-          </div>
+          </Link>
+        </div>
       </div>
     </section>
   )

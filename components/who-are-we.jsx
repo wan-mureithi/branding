@@ -109,7 +109,7 @@ function WhoAreWe() {
                 alt="Team photo"
                 width={600}
                 height={400}
-                className="w-full rounded"
+                className="w-full rounded hidden md:block"
               />
             </motion.div>
 
@@ -117,7 +117,7 @@ function WhoAreWe() {
             <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-              className="absolute -top-8 -right-8"
+              className="absolute -top-8 -right-8 hidden md:block"
             >
               <Image
                 src="/icons/yellow-bulb.png"

@@ -8,6 +8,7 @@ import WhoAreWe from '../../components/who-are-we'
 import WhatWeDo from '../../components/what-we-do'
 import Community from '../../components/community'
 import FAQ from '../../components/faq'
+import Link from 'next/link'
 
 function Page() {
   const textVariants = {
@@ -56,9 +57,11 @@ function Page() {
           leo dui. Nulla risus urna augue eget cursus pharetra sem volutpat.
         </motion.p>
         <motion.div variants={textVariants}>
-          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#9E0059] hover:bg-[#6929FF] text-white rounded-full text-primary-foreground shadow px-6 py-2 text-lg">
-            Join Us
-          </button>
+          <Link href="/register">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#9E0059] hover:bg-[#6929FF] text-white rounded-full text-primary-foreground shadow px-6 py-2 text-lg">
+              Join Us
+            </button>
+          </Link>
         </motion.div>
         <div className="mt-24 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Data for Stat Boxes */}
@@ -110,25 +113,25 @@ function Page() {
               {/* Overlay */}
               <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 text-left">
                 {item.id === 1 || item.id === 4 ? (
-                  <>
+                  <div className="relative bottom-20">
                     <h3 className="mb-4 text-4xl font-bold md:text-5xl">
                       {item.title}
                     </h3>
                     <p className="mb-4 text-sm text-gray-200">
                       Lorem ipsum dolor sit amet consectetur.
                     </p>
-                    <button className="group border border-input shadow-sm hover:bg-accent hover:text-black rounded-full flex h-auto w-fit items-center bg-transparent text-white">
+                    <button className="group border border-input shadow-sm hover:bg-accent hover:text-black rounded-full flex h-auto w-fit items-center bg-transparent px-6 text-white">
                       {item.id === 1 ? 'Join Community' : 'Donate Now'}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </button>
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div className="relative -top-20">
                     <span className="mb-2 text-lg font-semibold">
                       {item.title}
                     </span>
                     <h3 className="text-xl font-bold">{item.subtitle}</h3>
-                  </>
+                  </div>
                 )}
               </div>
             </motion.div>

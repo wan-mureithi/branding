@@ -34,7 +34,7 @@ function Difference() {
                 alt=""
                 width={40}
                 height={40}
-                className="w-10 h-10 relative left-56"
+                className="w-10 h-10 relative left-56 hidden md:block"
               />
 
               <div className="flex flex-wrap gap-4">

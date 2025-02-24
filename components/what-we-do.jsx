@@ -88,8 +88,8 @@ function WhatWeDo() {
             </p>
 
             <p className="mb-6 text-gray-600">
-              Whether it's **entrepreneurship, personal development, or career
-              advancement**, we create tailored experiences that foster
+              Whether it's entrepreneurship, personal development, or career
+              advancement, we create tailored experiences that foster
               creativity, resilience, and confidence. By bridging the gap
               between education and real-world application, we ensure that young
               people have the opportunities and resources to thrive in an

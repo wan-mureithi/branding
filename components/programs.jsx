@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Button } from '../components/ui/button'
 import { Carousel, CarouselContent } from '../components/ui/carousel'
+import { Card, CardContent } from '../components/ui/card'
 import { GradientArrowButton } from '../components/ui/gradient-arrow-btn'
 import SectionHeading from './ui/section-heading'
+import Link from 'next/link'
 
 function Programs() {
   const itemVariants = {
@@ -15,11 +17,15 @@ function Programs() {
       transition: { duration: 0.6, ease: 'easeOut' },
     },
   }
-
-  const hoverEffect = {
-    scale: 1.05,
-    brightness: 1.2,
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
   }
+
   const programs = [
     {
       image: '/images/program-1.png',
@@ -63,10 +69,8 @@ function Programs() {
           </div>
         </div>
 
-        {/* Carousel */}
-        {/* Carousel */}
-        <Carousel>
-          <CarouselContent className="flex sm:flex-col md:flex-row md:flex-nowrap">
+        {/* <Carousel>
+          <CarouselContent className="flex flex-col md:flex-row md:flex-nowrap">
             {programs.map((program, index) => (
               <motion.div
                 key={index}
@@ -76,7 +80,7 @@ function Programs() {
                 className="sm:basis-full md:basis-1/3 pl-0 md:pl-4"
               >
                 <div className="overflow-hidden rounded-3xl bg-gradient-to-b from-zinc-900 to-black">
-                  {/* Image Section */}
+       
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={program.image || '/placeholder.svg'}
@@ -95,7 +99,7 @@ function Programs() {
                     </div>
                   </div>
 
-                  {/* Text Content */}
+  
                   <div className="p-2 md:p-8">
                     <p className="mb-6 text-gray-400">{program.description}</p>
                     <a
@@ -115,13 +119,57 @@ function Programs() {
               </motion.div>
             ))}
           </CarouselContent>
-        </Carousel>
+        </Carousel> */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {programs.map((program, index) => (
+            <motion.div key={index} variants={fadeInUp}>
+              <Card className="overflow-hidden border-zinc-800 bg-gradient-to-br from-zinc-900 to-black text-white">
+                <div className="relative aspect-video">
+                  <Image
+                    src={program.image || '/placeholder.svg'}
+                    alt={`${program.highlightedWord} program`}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <h3 className="text-xl font-bold">
+                      {program.title}{' '}
+                      <span className="text-pink-500">
+                        {program.highlightedWord}
+                      </span>{' '}
+                      {program.suffix}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <CardContent className="p-6">
+                  <p className="mb-6 text-gray-400">{program.description}</p>
+                  <a
+                    href="https://game-on-web.web.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="group">
+                      Learn More
+                      <span className="inline-block transition-transform group-hover:translate-x-1">
+                        →
+                      </span>
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
 
         {/* CTA Button */}
         <div className="flex mt-8 justify-center items-center gap-4">
-          <Button className="px-8 py-6 text-lg">
-            View all Programs and Initiatives
-          </Button>
+          <Link href="/programs">
+            <Button className="px-8 py-6 text-lg">
+              View all Programs and Initiatives
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

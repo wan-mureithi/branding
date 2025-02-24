@@ -8,6 +8,7 @@ import Topbar from '../../components/topbar'
 import FAQ from '../../components/faq'
 import { Button } from '../../components/ui/button'
 import PartnerSection from '../../components/partners'
+import Link from 'next/link'
 
 function Page() {
   const fadeInUp = {
@@ -50,10 +51,12 @@ function Page() {
               need to lead, innovate, and inspire.
             </p>
             <motion.div variants={fadeInUp}>
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#9E0059] hover:bg-[#6929FF] text-white rounded-full group px-8 py-6 text-lg">
-                Partner With Us
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              <Link href="/partners">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#9E0059] hover:bg-[#6929FF] text-white rounded-full group px-8 py-6 text-lg">
+                  Partner With Us
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
 
