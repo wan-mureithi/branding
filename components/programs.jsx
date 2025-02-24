@@ -64,15 +64,16 @@ function Programs() {
         </div>
 
         {/* Carousel */}
+        {/* Carousel */}
         <Carousel>
-          <CarouselContent>
+          <CarouselContent className="flex sm:flex-col md:flex-row md:flex-nowrap">
             {programs.map((program, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: hoverEffect.scale }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="md:basis-1/3 pl-4"
+                className="sm:basis-full md:basis-1/3 pl-0 md:pl-4"
               >
                 <div className="overflow-hidden rounded-3xl bg-gradient-to-b from-zinc-900 to-black">
                   {/* Image Section */}
@@ -112,7 +113,6 @@ function Programs() {
           <Button className="px-8 py-6 text-lg">
             View all Programs and Initiatives
           </Button>
-          <GradientArrowButton />
         </div>
       </div>
     </section>

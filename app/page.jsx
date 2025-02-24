@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -21,16 +22,12 @@ function Page() {
 
       <section className="container mx-auto px-4 py-12 md:py-24">
         <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-          <div className=" space-y-6">
+          {/* Text Content */}
+          <div className="space-y-6">
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 100,
-                damping: 10,
-                duration: 0.8,
-              }}
+              transition={{ type: 'spring', stiffness: 100, damping: 10 }}
               className="relative text-4xl font-bold leading-tight md:text-6xl"
             >
               Empowering Youth
@@ -41,7 +38,7 @@ function Page() {
                   alt=""
                   width={300}
                   height={100}
-                  className="absolute -bottom-1 right-0  md:-bottom-2 z-[-1]"
+                  className="absolute -bottom-1 right-0 md:-bottom-2 z-[-1]"
                 />
               </span>
               <Image
@@ -53,10 +50,8 @@ function Page() {
               />
             </motion.h1>
             <p className="text-gray-300 text-lg md:text-xl max-w-xl">
-              Lorem ipsum dolor sit amet consectetur. Adipiscing vulputate nisi
-              sit ut tempor. Phasellus sed blandit amet sed tortor. Sit nec
-              placerat in nam in. Est purus enim eget magna lacinia at mauris
-              non.
+              Unlocking opportunities and driving change through youth
+              empowerment initiatives. Join us in shaping the future today.
             </p>
             <Button className="bg-pink-600 hover:bg-pink-700 text-lg px-8">
               Donate
@@ -82,7 +77,8 @@ function Page() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] md:aspect-square">
+          {/* Hero Image */}
+          <div className="relative hidden aspect-[4/3] md:aspect-square">
             <Image
               src="/images/hero.svg"
               alt="Youth empowerment activities"
@@ -116,11 +112,12 @@ function Page() {
             />
           </div>
           <p className="text-center mt-6 text-lg italic">
-            "The power of youths is the common wealth for the entire world."
+            "The power of youth is the common wealth for the entire world."
           </p>
         </div>
       </section>
 
+      {/* What We Do Section */}
       <WhatWeDo />
 
       {/* Partners Section */}
@@ -128,15 +125,11 @@ function Page() {
         <div className="container mx-auto px-4">
           <SectionHeading title="PARTNERS AND SPONSORS" />
           <h2 className="text-2xl md:text-4xl font-bold max-w-2xl mb-6">
-            Our Program is backed by the best who Empowering Youth Through
-            Strategic Partnerships and Innovative Programs for a Brighter
-            Future.
+            Empowering Youth Through Strategic Partnerships and Innovation
           </h2>
           <p className="text-gray-300 max-w-2xl mb-8">
-            Lorem ipsum dolor sit amet consectetur. Sit viverra tristique dolor
-            molestie lectus ac. Adipiscing cras lorem at ac. Sed blandit sem
-            magna eget elementum. Morbi lorem turpis viverra felis sed. Amet
-            massa venenatis nisi in massa scelerisque scelerisque turpis.
+            We collaborate with leading organizations that believe in the power
+            of youth and their potential to change the world.
           </p>
           <Button className="bg-pink-600 hover:bg-pink-700">
             Partner with us
@@ -146,6 +139,8 @@ function Page() {
           <AutoScrollCarousel />
         </div>
       </section>
+
+      {/* Other Sections */}
       <WhyWeDoThis />
       <Programs />
       <LatestNews />
