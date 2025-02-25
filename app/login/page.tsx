@@ -62,7 +62,7 @@ export default function LoginPage() {
         transition={{ duration: 1 }}
         className="hidden flex-1 items-center justify-center p-8 md:flex"
       >
-        <div className="relative aspect-[4/3] h-[calc(100vh-8rem)] w-full max-w-3xl">
+        <div className="relative aspect-[3/4] h-[calc(100vh-8rem)] w-full max-w-3xl">
           <Image
             src="/images/auth/auth1.png"
             alt="Testimonial"
