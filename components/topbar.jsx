@@ -18,8 +18,8 @@ function Topbar() {
   const navigationItems = [
     { href: '/', label: 'Home' },
     { href: '/about-us', label: 'About Us' },
-    { href: '/programs', label: 'Programs' },
-    { href: '/partners', label: 'Partners' },
+    { href: '/programs', label: 'Programs and Initiatives' },
+    { href: '/partners', label: 'Our Partners' },
   ]
   return (
     <header className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -43,39 +43,39 @@ function Topbar() {
           <nav className="flex flex-col gap-4 mt-8">
             <Link
               href="/"
-              className="text-lg text-white hover:text-pink-500 transition-colors"
+              className="text-sm text-white hover:text-pink-500 transition-colors"
             >
               Home
             </Link>
             <Link
               href="/about-us"
-              className="text-lg text-white hover:text-pink-500 transition-colors"
+              className="text-sm text-white hover:text-pink-500 transition-colors"
             >
               About Us
             </Link>
             <Link
               href="/programs"
-              className="text-lg text-white hover:text-pink-500 transition-colors"
+              className="text-sm text-white hover:text-pink-500 transition-colors"
             >
-              Programs
+              Programs and Initiatives
             </Link>
             <a
               href="/partners"
-              className="text-lg text-white hover:text-pink-500 transition-colors"
+              className="text-sm text-white hover:text-pink-500 transition-colors"
             >
-              Partners
+              Our Partners
             </a>
             <Button
               variant="ghost"
               onClick={() => router.push('/login')}
-              className="text-white text-left hover:text-pink-500"
+              className="text-white text-left hover:text-pink-500 ext-sm"
             >
               <User className="w-6 h-6" fill="#ffff" />
               Log In
             </Button>
             <Button
               onClick={() => router.push('/register')}
-              className="bg-pink-600 hover:bg-pink-700"
+              className="text-sm bg-pink-600 hover:bg-pink-700"
             >
               SIGN UP FOR FREE →
             </Button>
@@ -88,7 +88,7 @@ function Topbar() {
           <Link
             key={item.href}
             href={item.href}
-            className={`text-lg hover:underline underline-offset-4 hover:text-pink-500 transition-colors ${
+            className={`hover:underline underline-offset-4 hover:text-pink-500 transition-colors ${
               pathname === item.href
                 ? 'underline underline-offset-4 text-pink-500'
                 : 'text-white '

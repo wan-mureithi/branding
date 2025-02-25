@@ -7,10 +7,14 @@ import Autoplay from 'embla-carousel-autoplay'
 import { cn } from '../lib/utils'
 
 const images = [
-  '/images/hero.svg',
-  '/images/hero.svg',
-  '/images/hero.svg',
-  '/images/hero.svg',
+  '/images/about/hero-1.svg',
+  '/images/about/hero-2.svg',
+  '/images/about/hero-3.svg',
+  '/images/about/hero-2.svg',
+  '/images/about/hero-1.svg',
+  '/images/about/hero-2.svg',
+  '/images/about/hero-3.svg',
+  '/images/about/hero-2.svg',
 ]
 
 export default function HeroCarousel() {
@@ -19,8 +23,8 @@ export default function HeroCarousel() {
   //   [Autoplay({ delay: 3000, stopOnInteraction: true })]
   // )
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'center' },
-    [Autoplay({ delay: 3000, stopOnInteraction: true })]
+    { loop: true, align: 'center', containScroll: 'trim' },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
   )
 
   const [selectedIndex, setSelectedIndex] = useState(0)

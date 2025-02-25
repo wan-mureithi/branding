@@ -23,7 +23,7 @@ function Page() {
 
       <section className="container mx-auto px-4  ">
         <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 py-12 md:py-24 ">
+          <div className="space-y-6 py-12 md:py-24 md:pb-12 ">
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -66,7 +66,7 @@ function Page() {
                 className="w-16 h-16"
               />
             </div>
-            <div className="w-full flex justify-end">
+            <div className="w-full md:flex justify-end hidden">
               <Image
                 src="/star-img-2.svg"
                 alt=""
@@ -79,42 +79,29 @@ function Page() {
 
           {/* Hero Image */}
           <div className="relative hidden md:block aspect-[4/3] md:aspect-square">
-            {/* <Image
-              src="/images/hero.svg"
-              alt="Youth empowerment activities"
-              fill
-              className="object-cover rounded-2xl"
-            /> */}
             <HeroCarousel />
           </div>
         </div>
 
         {/* Featured Section */}
-        <div className="mt-16 md:mt-24 p-6 md:p-8 bg-zinc-900/50 rounded-xl backdrop-blur">
-          <p className="text-sm text-center mb-6">Featured in</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <Image
-              src="/images/tech-crunch.png"
-              alt="TechCrunch"
-              width={150}
-              height={30}
-            />
-            <Image
-              src="/images/forbes.png"
-              alt="Forbes"
-              width={120}
-              height={30}
-            />
-            <Image
-              src="/images/bloomberg.png"
-              alt="Bloomberg"
-              width={150}
-              height={30}
-            />
-          </div>
-          <p className="text-center mt-6 text-lg italic">
-            "The power of youth is the common wealth for the entire world."
-          </p>
+        <div className="mt-1 md:flex justify-center hidden p-6 relative w-full h-full bottom-10">
+          <Image
+            src="/images/about/feature-desktop.svg"
+            alt="Youth empowerment activities"
+            width={750}
+            height={300}
+            className=""
+          />
+        </div>
+        {/* Featured Section mobile */}
+        <div className="mt-1 md:hidden p-6 relative w-full h-full bottom-10">
+          <Image
+            src="/images/about/feature-mobile.svg"
+            alt="Youth empowerment activities"
+            width={650}
+            height={200}
+            className=""
+          />
         </div>
       </section>
 
