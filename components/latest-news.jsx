@@ -9,7 +9,7 @@ import { Card, CardContent } from '../components/ui/card'
 function LatestNews() {
   const articles = [
     {
-      image: '/images/article1.png',
+      image: '/images/article1.svg',
       author: 'Ann Njeri',
       date: '20 Feb 2025',
       title: 'Charity, Expectations vs. Reality',
@@ -17,7 +17,7 @@ function LatestNews() {
         'Lorem ipsum dolor sit amet consectetur. Libero nisi faucibus convallis morbi enim tortor condimentum a. Non vitae sed sed mauris vulputate adipiscing facilisi dui...',
     },
     {
-      image: '/images/article2.png',
+      image: '/images/article2.svg',
       author: 'Peter Kamau',
       date: '20 Feb 2025',
       title: 'Charity, Expectations vs. Reality',
@@ -25,7 +25,7 @@ function LatestNews() {
         'Lorem ipsum dolor sit amet consectetur. Libero nisi faucibus...',
     },
     {
-      image: '/images/article2.png',
+      image: '/images/article3.svg',
       author: 'Peter Kamau',
       date: '20 Feb 2025',
       title: 'Charity, Expectations vs. Reality',
@@ -46,12 +46,13 @@ function LatestNews() {
           {/* Featured Article */}
           <Card className="bg-white border shadow-lg md:row-span-2">
             <CardContent className="p-0">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-t-lg">
+              <div className=" overflow-hidden rounded-t-lg">
                 <Image
                   src={articles[0].image || '/placeholder.svg'}
                   alt={articles[0].title}
-                  fill
-                  className="object-cover"
+                  width={620}
+                  height={300}
+                  //className="object-cover"
                 />
               </div>
               <div className="p-6">
@@ -67,7 +68,10 @@ function LatestNews() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{articles[0].title}</h3>
                 <p className="text-gray-600 mb-6">{articles[0].description}</p>
-                <Button variant="outline" className="group">
+                <Button
+                  variant="outline"
+                  className="group border-[#9E0059] text-[#9E0059]"
+                >
                   Read More
                   <span className="inline-block transition-transform group-hover:translate-x-1">
                     →
@@ -83,7 +87,7 @@ function LatestNews() {
               <Card key={index} className="bg-white border shadow-lg">
                 <CardContent className="p-0">
                   <div className="flex flex-col md:flex-row">
-                    <div className="relative w-full md:w-48 aspect-[16/10] md:aspect-square">
+                    <div className="relative w-full md:w-48 md:aspect-square">
                       <Image
                         src={article.image || '/placeholder.svg'}
                         alt={article.title}
@@ -108,7 +112,10 @@ function LatestNews() {
                       <p className="text-gray-600 mb-6">
                         {article.description}
                       </p>
-                      <Button variant="outline" className="group">
+                      <Button
+                        variant="outline"
+                        className="group border-[#9E0059] text-[#9E0059]"
+                      >
                         Read More
                         <span className="inline-block transition-transform group-hover:translate-x-1">
                           →
@@ -134,3 +141,4 @@ function LatestNews() {
 }
 
 export default LatestNews
+background:;
