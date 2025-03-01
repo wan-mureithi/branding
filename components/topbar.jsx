@@ -22,7 +22,7 @@ function Topbar() {
     { href: '/partners', label: 'Our Partners' },
   ]
   return (
-    <header className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="container mx-auto px-4 py-4 flex items-center bg-black justify-between">
       <Image
         src="/typni-logo.svg"
         alt="Logo"
